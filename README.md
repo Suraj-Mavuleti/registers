@@ -162,7 +162,7 @@ subdomain removed.
 
 - **Add a domain:** create a folder `domains/<the-domain>/` (see
   [`domains/README.md`](./domains/README.md)), add the domain → `productId`
-  mapping to [`zones.json`](./zones.json), and delegate the domain to skrime.eu.
+  entry to the `SKRIME_PRODUCTS` secret, and delegate the domain to skrime.eu.
 - **Validation logic** lives in
   [`.github/scripts/validate-pr.js`](./.github/scripts/validate-pr.js).
 
@@ -179,17 +179,17 @@ subdomain folder and submits the complete set per domain.
 
 Set this up once:
 
-1. **Secrets** — under *Settings → Secrets and variables → Actions*, add:
-   - `SKRIME_API_URL` → the zone endpoint, e.g. `https://skrime.eu/api/dns/zone`
-   - `SKRIME_API_KEY` → your API token (sent as `Authorization: Bearer <key>`)
-2. **`zones.json`** — map each domain to its skrime `productId`:
-   ```json
-   {
-     "addictedto.beer": "your-product-id",
-     "skillissue.gg": "your-product-id"
-   }
-   ```
-   Domains whose `productId` is still the `XXXX…` placeholder are skipped.
+**Secrets** — under *Settings → Secrets and variables → Actions*, add:
+
+- `SKRIME_API_URL` → the zone endpoint, e.g. `https://skrime.eu/api/dns/zone`
+- `SKRIME_API_KEY` → your API token (sent as `Authorization: Bearer <key>`)
+- `SKRIME_PRODUCTS` → a JSON object mapping each domain to its skrime `productId`:
+  ```json
+  {"addictedto.beer":"your-product-id","skillissue.gg":"your-product-id"}
+  ```
+
+The list of domains comes from the folders under [`domains/`](./domains); any
+domain missing from `SKRIME_PRODUCTS` is skipped.
 
 How a record file maps to the zone:
 

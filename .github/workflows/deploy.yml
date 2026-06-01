@@ -7,7 +7,6 @@ on:
     branches: [main]
     paths:
       - "domains/**"
-      - "zones.json"
       - ".github/scripts/deploy.js"
   workflow_dispatch: {}
 
@@ -34,3 +33,4 @@ jobs:
         env:
           SKRIME_API_URL: ${{ secrets.SKRIME_API_URL }}
           SKRIME_API_KEY: ${{ secrets.SKRIME_API_KEY }}
+          SKRIME_PRODUCTS: ${{ secrets.SKRIME_PRODUCTS }}
