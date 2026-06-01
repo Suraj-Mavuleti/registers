@@ -7,9 +7,7 @@ name *is* the domain.
 domains/
 ├── addictedto.beer/    ← available domain
 │   └── myname.json     ← myname.addictedto.beer
-├── skillissue.gg/      ← available domain
-│   └── ...
-└── hasno.fitness/      ← available domain
+└── skillissue.gg/      ← available domain
     └── ...
 ```
 

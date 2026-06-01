@@ -20,7 +20,6 @@ use**. Currently available:
 | --- | --- |
 | `addictedto.beer` | `myname.addictedto.beer` |
 | `skillissue.gg` | `myname.skillissue.gg` |
-| `hasno.fitness` | `myname.hasno.fitness` |
 
 For example, the folder `domains/addictedto.beer/` means you can register
 `anything.addictedto.beer`.
