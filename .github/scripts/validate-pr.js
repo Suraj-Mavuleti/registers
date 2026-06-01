@@ -23,7 +23,7 @@
 
 const MARKER = "<!-- subdomain-bot -->";
 
-const ALLOWED_RECORD_TYPES = ["A", "AAAA", "CNAME", "TXT", "MX", "NS", "URL"];
+const ALLOWED_RECORD_TYPES = ["A", "AAAA", "CNAME", "ALIAS", "MX", "SRV", "TXT", "CAA", "NS"];
 
 // Names nobody is allowed to register (infrastructure / abuse prevention).
 const RESERVED = new Set([
