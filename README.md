@@ -1,4 +1,4 @@
-# 🌐 Free Subdomains
+# Free Subdomains
 
 Get a **free custom subdomain** on one of our domains — for your website,
 project, portfolio, blog or homelab. Everything is managed through GitHub: you
@@ -9,7 +9,7 @@ No account, no payment, no dashboard. Just one small JSON file.
 
 ---
 
-## 🚀 Get a subdomain in 4 steps
+## Get a subdomain in 4 steps
 
 ### 1. Pick a domain
 
@@ -39,7 +39,7 @@ Example — to register **`myname.example.com`**, create
 }
 ```
 
-> ⚠️ The file name becomes your subdomain. `myname.json` → `myname.example.com`.
+> Note: The file name becomes your subdomain. `myname.json` → `myname.example.com`.
 > The `owner.github` field **must be your own GitHub username** — that's what
 > lets you (and only you) edit it later.
 
@@ -47,20 +47,20 @@ Example — to register **`myname.example.com`**, create
 
 Open a PR with your new file. Within a minute the **validation bot** will comment:
 
-- ✅ **All checks passed** → a maintainer reviews and merges.
-- 🟡 **Changes requested** → fix the listed issues and push again; it re-checks
+- **All checks passed** → a maintainer reviews and merges.
+- **Changes requested** → fix the listed issues and push again; it re-checks
   automatically.
-- ❌ **Ownership check failed** → you tried to change someone else's subdomain,
+- **Ownership check failed** → you tried to change someone else's subdomain,
   so the PR is closed automatically.
 
-### 4. Done 🎉
+### 4. Done
 
 Once merged, your DNS records go live. Point your service (GitHub Pages, Vercel,
 Netlify, a server IP, …) at it and you're online.
 
 ---
 
-## 📝 File format
+## File format
 
 ```jsonc
 {
@@ -97,7 +97,7 @@ Netlify, a server IP, …) at it and you're online.
 
 ---
 
-## 🔐 How approval & ownership works
+## How approval & ownership works
 
 This is fully automated by the workflow in
 [`.github/workflows/pr-check.yml`](./.github/workflows/pr-check.yml):
@@ -109,8 +109,8 @@ This is fully automated by the workflow in
    checked.
 4. **Ownership** — when a PR **edits or deletes an existing** subdomain, the PR
    author must match the `owner.github` in the file that's already on `main`.
-   - ✅ You own it → allowed to edit / delete.
-   - ❌ You don't → the PR is **closed automatically** with an explanation.
+   - You own it → allowed to edit / delete.
+   - You don't → the PR is **closed automatically** with an explanation.
 5. A maintainer does the final merge for new entries.
 
 So: **first come, first served**, and only the original creator can later change
@@ -118,7 +118,7 @@ their own subdomain.
 
 ---
 
-## 🛠️ Editing or removing your subdomain
+## Editing or removing your subdomain
 
 - **Edit:** open a PR changing your existing `domains/<domain>/<subdomain>.json`.
   As long as `owner.github` is you, it's accepted.
@@ -126,7 +126,7 @@ their own subdomain.
 
 ---
 
-## ❓ FAQ
+## FAQ
 
 **Can I grab someone else's subdomain?** No. Editing a file you don't own gets
 your PR closed automatically.
@@ -141,7 +141,7 @@ subdomain removed.
 
 ---
 
-## ⚙️ For maintainers
+## For maintainers
 
 - **Add a domain:** create a folder `domains/<the-domain>/` (see
   [`domains/README.md`](./domains/README.md)) and delegate the domain to your DNS
@@ -157,6 +157,6 @@ subdomain removed.
 
 ---
 
-## 📄 License
+## License
 
 [MIT](./LICENSE)
